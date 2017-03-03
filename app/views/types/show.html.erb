@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "type" , :media => "all" %>
+
+<h1><%= @type.name %></h1>
+
+<table class="t_main">
+<tr>
+  <th class="t_top">ばつぐん</th>
+  <th class="t_top">いまひとつ</th>
+</tr>
+<% @tables.each do |t| %>
+<tr>
+  <td class="t_line01"><%= t[1] %></th>
+  <td class="t_line01"><%= t[0] %></th>
+</tr>
+<% end %>
+</table>
+<%= link_to 'Back to List', types_path %>

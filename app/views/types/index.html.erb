@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "type" , :media => "all" %>
+<h1>Type List</h1>
+
+<table class="t_main">
+    <thead>
+        <tr>
+            <th class="t_top">Name</th>
+            <th class="t_top">Jap Name</th>
+            <th class="t_top">Jap Name Kana</th>
+            <th class="t_top"></th>
+        </tr>
+    </thead>
+    <% @types.each do |t| %>
+    <tr>
+        <td class="t_line01"><%= t.name %></td>
+        <td class="t_line01"><%= t.jap_name %></td>
+        <td class="t_line01"><%= t.jap_name_kana %></td>
+        <td class="t_line01"><%= link_to 'Show Detail', type_path(t.id) %></td>
+    </tr>
+    <% end %>
+</table>
